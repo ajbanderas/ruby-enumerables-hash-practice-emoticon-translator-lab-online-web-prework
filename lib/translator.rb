@@ -15,11 +15,11 @@ def get_japanese_emoticon(file, emoticon)
   emoticon_hash = load_library(file)
   pp emoticon_hash
   sorry_message = "Sorry, that emoticon was not found"
-  #emoticon_hash[:get_emoticon].each do |e_key, j_value|
-   # if e_key == emoticon
-    #  return j_value
-    #end
-  #end
+  emoticon_hash[:get_emoticon].each do |e_key, j_value|
+    if e_key == emoticon
+      return j_value
+    end
+  end
   sorry_message
 end
 
