@@ -12,7 +12,7 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, emoticon)
-  emoticon_hash = YAML.load_file(file)
+  emoticon_hash = load_library(file)
   pp emoticon_hash
   sorry_message = "Sorry, that emoticon was not found"
   #emoticon_hash[:get_emoticon].each do |e_key, j_value|
