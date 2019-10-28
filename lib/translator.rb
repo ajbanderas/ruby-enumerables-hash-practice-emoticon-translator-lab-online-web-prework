@@ -12,7 +12,10 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, emoticon)
-  
+  emoticon_hash = YAML.load_file(file)
+  emoticon_hash.each do |key, value|
+    
+  end
 end
 
 def get_english_meaning
