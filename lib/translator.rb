@@ -13,9 +13,12 @@ end
 
 def get_japanese_emoticon(file, emoticon)
   emoticon_hash = YAML.load_file(file)
-  emoticon_hash.each do |key, value|
-    
+  emoticon_hash[:get_emoticon].each do |e_key, j_value|
+    if e_key == emoticon
+      return j_value
+    end
   end
+  
 end
 
 def get_english_meaning
